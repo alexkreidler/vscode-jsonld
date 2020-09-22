@@ -1,0 +1,6 @@
+[
+	{
+		"id": "@base",
+		"description": "Used to set the [base IRI](https://www.w3.org/TR/rdf11-concepts/#dfn-base-iri) against which to resolve those [relative IRI references](https://tools.ietf.org/html/rfc3987#section-6.5) which are otherwise interpreted relative to the document. This keyword is described in [§ 4.1.3 Base IRI](https://www.w3.org/TR/json-ld11/#base-iri)."
+	}
+]

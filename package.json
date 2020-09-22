@@ -1,0 +1,127 @@
+{
+	"name": "vscode-jsonld",
+	"description": "A JSON-LD language server",
+	"author": "Alex Kreidler",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-extension-samples"
+	},
+	"publisher": "vscode-samples",
+	"categories": [],
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.26.0"
+	},
+	"activationEvents": [
+		"onLanguage:jsonld"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "jsonld",
+				"aliases": [
+					"JSON-LD"
+				],
+				"filenamePatterns": [
+					"*.jsonld"
+				],
+				"mimetypes": [
+					"application/ld+json"
+				],
+				"configuration": "./lang/language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "jsonld",
+				"scopeName": "source.json",
+				"path": "./lang/JSON.tmLanguage.json"
+			}
+		],
+		"commands": [
+			{
+				"command": "jsonld.startStreaming",
+				"title": "Start Stream Logs into jsonld.port"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "JSON-LD",
+			"properties": {
+				"jsonld.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				},
+				"jsonld.trace.websocketPort": {
+					"type": "number",
+					"default": 7000,
+					"scope": "window",
+					"description": "The WebSocket port to stream LSP log data into."
+				},
+				"jsonld.trace.useWebsocket": {
+					"type": "boolean",
+					"description": "Determines whether to output to the specified websocket port or to the standard extension log output",
+					"default": false
+				},
+				"jsonld.trace.server": {
+					"scope": "window",
+					"type": "object",
+					"description": "Traces the communication between VS Code and the language server.",
+					"properties": {
+						"verbosity": {
+							"type": "string",
+							"description": "Controls the verbosity of the trace.",
+							"enum": [
+								"off",
+								"message",
+								"verbose"
+							],
+							"default": "off"
+						},
+						"format": {
+							"type": "string",
+							"description": "Controls the output format of the trace.",
+							"enum": [
+								"text",
+								"json"
+							],
+							"default": "text"
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "cd client && yarn run update-vscode && cd .. && yarn run compile",
+		"compile:client": "tsc -p ./client/tsconfig.json",
+		"compile:server": "tsc -p ./server/tsconfig.json",
+		"watch:client": "tsc -w -p ./client/tsconfig.json",
+		"watch:server": "tsc -w -p ./server/tsconfig.json",
+		"compile": "yarn run compile:client && yarn run compile:server",
+		"watch": "concurrently \"yarn run watch:client\" \"yarn run watch:server\"",
+		"postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.0",
+		"@types/node": "^12.12.0",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"concurrently": "^5.3.0",
+		"eslint": "^7.1.0",
+		"typescript": "^4.0.2"
+	},
+	"dependencies": {
+		"@types/jsonld": "^1.5.1",
+		"jsonld": "^3.1.1",
+		"jsonld-context-parser": "^2.1.0"
+	}
+}

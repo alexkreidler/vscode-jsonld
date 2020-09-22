@@ -1,0 +1,7 @@
+{
+	"editor.insertSpaces": false,
+	"languageServerExample.trace.server": {
+		"format": "json",
+		"verbosity": "verbose"
+	}
+}

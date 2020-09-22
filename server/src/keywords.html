@@ -1,0 +1,434 @@
+<dt><code>@base</code></dt>
+<dd>
+  Used to set the
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-base-iri"
+    >base <abbr title="Internationalized Resource Identifier">IRI</abbr></a
+  >
+  against which to resolve those
+  <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc3987#section-6.5"
+    >relative
+    <abbr title="Internationalized Resource Identifier">IRI</abbr> references</a
+  >
+  which are otherwise interpreted relative to the document. This keyword is
+  described in
+  <a class="sectionRef sec-ref" href="#base-iri"
+    >§&nbsp;<bdi class="secno">4.1.3 </bdi>Base
+    <abbr title="Internationalized Resource Identifier">IRI</abbr></a
+  >.
+</dd>
+<dt><code>@container</code></dt>
+<dd>
+  Used to set the default container type for a
+  <a href="#dfn-term" class="internalDFN" data-link-type="dfn">term</a>. This
+  keyword is described in the following sections:
+  <ul>
+    <li>
+      <a class="sectionRef sec-ref" href="#sets-and-lists"
+        >§&nbsp;<bdi class="secno">4.3 </bdi>Value Ordering</a
+      >,
+    </li>
+    <li>
+      <a class="sectionRef sec-ref" href="#data-indexing"
+        >§&nbsp;<bdi class="secno">4.6.1 </bdi>Data Indexing</a
+      >,
+    </li>
+    <li>
+      <a class="sectionRef sec-ref" href="#language-indexing"
+        >§&nbsp;<bdi class="secno">4.6.2 </bdi>Language Indexing</a
+      >,
+    </li>
+    <li class="changed">
+      <a class="sectionRef sec-ref" href="#node-identifier-indexing"
+        >§&nbsp;<bdi class="secno">4.6.3 </bdi>Node Identifier Indexing</a
+      >,
+    </li>
+    <li class="changed">
+      <a class="sectionRef sec-ref" href="#node-type-indexing"
+        >§&nbsp;<bdi class="secno">4.6.4 </bdi>Node Type Indexing</a
+      >
+    </li>
+    <li class="changed">
+      <a class="sectionRef sec-ref" href="#named-graphs"
+        >§&nbsp;<bdi class="secno">4.9 </bdi>Named Graphs</a
+      >,
+    </li>
+    <li class="changed">
+      <a class="sectionRef sec-ref" href="#named-graph-indexing"
+        >§&nbsp;<bdi class="secno">4.9.3 </bdi>Named Graph Indexing</a
+      >, and
+    </li>
+    <li class="changed">
+      <a class="sectionRef sec-ref" href="#named-graph-data-indexing"
+        >§&nbsp;<bdi class="secno">4.9.2 </bdi>Named Graph Data Indexing</a
+      >
+    </li>
+  </ul>
+</dd>
+<dt><code>@context</code></dt>
+<dd>
+  Used to define the short-hand names that are used throughout a JSON-LD
+  document. These short-hand names are called
+  <a href="#dfn-term" class="internalDFN" data-link-type="dfn">terms</a> and
+  help developers to express specific identifiers in a compact manner. The
+  <code>@context</code> keyword is described in detail in
+  <a class="sectionRef sec-ref" href="#the-context"
+    >§&nbsp;<bdi class="secno">3.1 </bdi>The Context</a
+  >.
+</dd>
+<dt class="changed"><code>@direction</code></dt>
+<dd class="changed">
+  Used to set the
+  <a href="#dfn-base-direction" class="internalDFN" data-link-type="dfn"
+    >base direction</a
+  >
+  of a
+  <a href="#dfn-json-ld-value" class="internalDFN" data-link-type="dfn"
+    >JSON-LD value</a
+  >, which are not
+  <a href="#dfn-typed-value" class="internalDFN" data-link-type="dfn"
+    >typed values</a
+  >
+  (e.g.
+  <a
+    data-link-type="dfn"
+    href="https://infra.spec.whatwg.org/#javascript-string"
+    >strings</a
+  >, or
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-language-tagged-string"
+    >language-tagged strings</a
+  >). This keyword is described in
+  <a class="sectionRef sec-ref" href="#string-internationalization"
+    >§&nbsp;<bdi class="secno">4.2.4 </bdi>String Internationalization</a
+  >.
+</dd>
+<dt><code>@graph</code></dt>
+<dd>
+  Used to express a
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-rdf-graph"
+    >graph</a
+  >. This keyword is described in
+  <a class="sectionRef sec-ref" href="#named-graphs"
+    >§&nbsp;<bdi class="secno">4.9 </bdi>Named Graphs</a
+  >.
+</dd>
+<dt><code>@id</code></dt>
+<dd>
+  Used to uniquely identify
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node objects</a
+  >
+  that are being described in the document with
+  <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc3987#section-2"
+    >IRIs</a
+  >
+  or
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-blank-node-identifier"
+    >blank node identifiers</a
+  >. This keyword is described in
+  <a class="sectionRef sec-ref" href="#node-identifiers"
+    >§&nbsp;<bdi class="secno">3.3 </bdi>Node Identifiers</a
+  >. A
+  <a href="#dfn-node-reference" class="internalDFN" data-link-type="dfn"
+    >node reference</a
+  >
+  is a
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >
+  containing only the <code>@id</code> property, which may represent a reference
+  to a
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >
+  found elsewhere in the document.
+</dd>
+<dt class="changed"><code>@import</code></dt>
+<dd class="changed">
+  Used in a
+  <a href="#dfn-context-definition" class="internalDFN" data-link-type="dfn"
+    >context definition</a
+  >
+  to load an external context within which the containing
+  <a href="#dfn-context-definition" class="internalDFN" data-link-type="dfn"
+    >context definition</a
+  >
+  is merged. This can be useful to add JSON-LD 1.1 features to JSON-LD 1.0
+  contexts.
+</dd>
+<dt class="changed"><code>@included</code></dt>
+<dd class="changed">
+  Used in a top-level
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >
+  to define an
+  <a href="#dfn-included-block" class="internalDFN" data-link-type="dfn"
+    >included block</a
+  >, for including secondary
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node objects</a
+  >
+  within another
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >.
+</dd>
+<dt><code>@index</code></dt>
+<dd>
+  Used to specify that a container is used to index information and that
+  processing should continue deeper into a JSON data structure. This keyword is
+  described in
+  <a class="sectionRef sec-ref" href="#data-indexing"
+    >§&nbsp;<bdi class="secno">4.6.1 </bdi>Data Indexing</a
+  >.
+</dd>
+<dt class="changed"><code>@json</code></dt>
+<dd class="changed">
+  Used as the <code>@type</code> value of a
+  <a href="#dfn-json-literal" class="internalDFN" data-link-type="dfn"
+    >JSON literal</a
+  >. This keyword is described in
+  <a href="#json-literals" class="sectionRef sec-ref"
+    >§&nbsp;<bdi class="secno">4.2.2 </bdi>JSON Literals</a
+  >.
+</dd>
+<dt><code>@language</code></dt>
+<dd>
+  Used to specify the language for a particular string value or the default
+  language of a JSON-LD document. This keyword is described in
+  <a class="sectionRef sec-ref" href="#string-internationalization"
+    >§&nbsp;<bdi class="secno">4.2.4 </bdi>String Internationalization</a
+  >.
+</dd>
+<dt><code>@list</code></dt>
+<dd>
+  Used to express an ordered set of data. This keyword is described in
+  <a class="sectionRef sec-ref" href="#lists"
+    >§&nbsp;<bdi class="secno">4.3.1 </bdi>Lists</a
+  >.
+</dd>
+<dt class="changed"><code>@nest</code></dt>
+<dd class="changed">
+  Used to define a
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-property"
+    >property</a
+  >
+  of a
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >
+  that groups together properties of that node, but is not an edge in the graph.
+</dd>
+<dt class="changed"><code>@none</code></dt>
+<dd class="changed">
+  Used as an index value in an
+  <a href="#dfn-index-map" class="internalDFN" data-link-type="dfn">index map</a
+  >, <a href="#dfn-id-map" class="internalDFN" data-link-type="dfn">id map</a>,
+  <a href="#dfn-language-map" class="internalDFN" data-link-type="dfn"
+    >language map</a
+  >,
+  <a href="#dfn-type-map" class="internalDFN" data-link-type="dfn">type map</a>,
+  or elsewhere where a
+  <a data-link-type="dfn" href="https://infra.spec.whatwg.org/#ordered-map"
+    >map</a
+  >
+  is used to index into other values, when the indexed node does not have the
+  feature being indexed.
+</dd>
+<dt class="changed"><code>@prefix</code></dt>
+<dd class="changed">
+  With the value <code>true</code>, allows this
+  <a href="#dfn-term" class="internalDFN" data-link-type="dfn">term</a> to be
+  used to construct a
+  <a href="#dfn-compact-iri" class="internalDFN" data-link-type="dfn"
+    >compact <abbr title="Internationalized Resource Identifier">IRI</abbr></a
+  >
+  when compacting. With the value <code>false</code> prevents the term from
+  being used to construct a
+  <a href="#dfn-compact-iri" class="internalDFN" data-link-type="dfn"
+    >compact <abbr title="Internationalized Resource Identifier">IRI</abbr></a
+  >. Also determines if the term will be considered when expanding
+  <a href="#dfn-compact-iri" class="internalDFN" data-link-type="dfn"
+    >compact IRIs</a
+  >.
+</dd>
+<dt class="changed"><code>@propagate</code></dt>
+<dd class="changed">
+  Used in a
+  <a href="#dfn-context-definition" class="internalDFN" data-link-type="dfn"
+    >context definition</a
+  >
+  to change the scope of that context. By default, it is <code>true</code>,
+  meaning that contexts propagate across
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node objects</a
+  >
+  (other than for
+  <a href="#dfn-type-scoped-context" class="internalDFN" data-link-type="dfn"
+    >type-scoped contexts</a
+  >, which default to <code>false</code>). Setting this to
+  <code>false</code> causes term definitions created within that context to be
+  removed when entering a new
+  <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+    >node object</a
+  >.
+</dd>
+<dt class="changed"><code>@protected</code></dt>
+<dd class="changed">
+  Used to prevent
+  <a href="#dfn-term-definition" class="internalDFN" data-link-type="dfn"
+    >term definitions</a
+  >
+  of a context to be overridden by other contexts. This keyword is described in
+  <a class="sectionRef sec-ref" href="#protected-term-definitions"
+    >§&nbsp;<bdi class="secno">4.1.11 </bdi>Protected Term Definitions</a
+  >.
+</dd>
+<dt><code>@reverse</code></dt>
+<dd>
+  Used to express reverse properties. This keyword is described in
+  <a class="sectionRef sec-ref" href="#reverse-properties"
+    >§&nbsp;<bdi class="secno">4.8 </bdi>Reverse Properties</a
+  >.
+</dd>
+<dt><code>@set</code></dt>
+<dd>
+  Used to express an unordered set of data and to ensure that values are always
+  represented as arrays. This keyword is described in
+  <a class="sectionRef sec-ref" href="#sets"
+    >§&nbsp;<bdi class="secno">4.3.2 </bdi>Sets</a
+  >.
+</dd>
+<dt><code>@type</code></dt>
+<dd>
+  Used to set the type of a
+  <a data-link-type="dfn" href="https://www.w3.org/TR/rdf11-concepts/#dfn-node"
+    >node</a
+  >
+  or the datatype of a
+  <a href="#dfn-typed-value" class="internalDFN" data-link-type="dfn"
+    >typed value</a
+  >. This keyword is described further in
+  <a class="sectionRef sec-ref" href="#specifying-the-type"
+    >§&nbsp;<bdi class="secno">3.5 </bdi>Specifying the Type</a
+  >
+  and
+  <a class="sectionRef sec-ref" href="#typed-values"
+    >§&nbsp;<bdi class="secno">4.2.1 </bdi>Typed Values</a
+  >.
+  <div class="note" role="note" id="issue-container-generatedID-2">
+    <div role="heading" class="note-title marker" id="h-note-2" aria-level="4">
+      <span>Note</span>
+    </div>
+    <div class="">
+      The use of <code>@type</code> to define a type for both
+      <a href="#dfn-node-object" class="internalDFN" data-link-type="dfn"
+        >node objects</a
+      >
+      and
+      <a href="#dfn-value-object" class="internalDFN" data-link-type="dfn"
+        >value objects</a
+      >
+      addresses the basic need to type data, be it a literal value or a more
+      complicated resource. Experts may find the overloaded use of the
+      <code>@type</code> keyword for both purposes concerning, but should note
+      that Web developer usage of this feature over multiple years has not
+      resulted in its misuse due to the far less frequent use of
+      <code>@type</code>
+      to express typed literal values.
+    </div>
+  </div>
+</dd>
+<dt><code>@value</code></dt>
+<dd>
+  Used to specify the data that is associated with a particular
+  <a
+    data-link-type="dfn"
+    href="https://www.w3.org/TR/rdf11-concepts/#dfn-property"
+    >property</a
+  >
+  in the graph. This keyword is described in
+  <a class="sectionRef sec-ref" href="#string-internationalization"
+    >§&nbsp;<bdi class="secno">4.2.4 </bdi>String Internationalization</a
+  >
+  and
+  <a class="sectionRef sec-ref" href="#typed-values"
+    >§&nbsp;<bdi class="secno">4.2.1 </bdi>Typed Values</a
+  >.
+</dd>
+<dt class="changed"><code>@version</code></dt>
+<dd class="changed">
+  Used in a
+  <a href="#dfn-context-definition" class="internalDFN" data-link-type="dfn"
+    >context definition</a
+  >
+  to set the
+  <a href="#dfn-processing-mode" class="internalDFN" data-link-type="dfn"
+    >processing mode</a
+  >. New features since
+  <cite
+    ><a href="https://www.w3.org/TR/2014/REC-json-ld-20140116/"
+      >JSON-LD 1.0</a
+    ></cite
+  >
+  [<cite
+    ><a
+      class="bibref"
+      data-link-type="biblio"
+      href="#bib-json-ld10"
+      title="JSON-LD 1.0"
+      >JSON-LD10</a
+    ></cite
+  >] described in this specification are not available when
+  <a href="#dfn-processing-mode" class="internalDFN" data-link-type="dfn"
+    >processing mode</a
+  >
+  has been explicitly set to <code>json-ld-1.0</code>.
+  <div class="note" role="note" id="issue-container-generatedID-3">
+    <div role="heading" class="note-title marker" id="h-note-3" aria-level="4">
+      <span>Note</span>
+    </div>
+    <div class="">
+      Within a
+      <a href="#dfn-context-definition" class="internalDFN" data-link-type="dfn"
+        >context definition</a
+      >
+      <code>@version</code> takes the specific value <code>1.1</code>, not
+      <code>"json-ld-1.1"</code>, as a JSON-LD 1.0 processor may accept a string
+      value for <code>@version</code>, but will reject a numeric value.
+    </div>
+  </div>
+  <div class="note" role="note" id="issue-container-generatedID-4">
+    <div role="heading" class="note-title marker" id="h-note-4" aria-level="4">
+      <span>Note</span>
+    </div>
+    <div class="">
+      The use of <code>1.1</code> for the value of <code>@version</code> is
+      intended to cause a JSON-LD 1.0 processor to stop processing. Although it
+      is clearly meant to be related to JSON-LD 1.1, it does not otherwise
+      adhere to the requirements for
+      <a href="https://semver.org/">Semantic Versioning</a>.
+    </div>
+  </div>
+</dd>
+<dt><code>@vocab</code></dt>
+<dd>
+  Used to expand properties and values in <code>@type</code> with a common
+  prefix
+  <a data-link-type="dfn" href="https://tools.ietf.org/html/rfc3987#section-2"
+    ><abbr title="Internationalized Resource Identifier">IRI</abbr></a
+  >. This keyword is described in
+  <a class="sectionRef sec-ref" href="#default-vocabulary"
+    >§&nbsp;<bdi class="secno">4.1.2 </bdi>Default Vocabulary</a
+  >.
+</dd>
